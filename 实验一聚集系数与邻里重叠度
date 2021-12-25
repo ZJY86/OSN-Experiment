@@ -6,8 +6,8 @@ using namespace std;
 //输入邻接矩阵graph，节点数n，要求聚集系数的节点v
 double Clustering(int** graph,int n,int v){
     
-    int friends = 0;/7的朋友个数
-    int *who = new int[n+1];/7的朋友组成的数组，从1开始索引
+    int friends = 0;//v的朋友个数
+    int *who = new int[n+1];//v的朋友组成的数组，从1开始索引
     for (int i = 1;i <= n;i++)
         if (graph[v-1][i-1] > 0)
             who[++friends] = i;
